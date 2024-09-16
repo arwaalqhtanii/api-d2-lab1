@@ -1,94 +1,51 @@
+
+
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #a3a3f1;
     margin: 0;
     padding: 20px;
-    display: flex;
-    justify-content: center;
 }
 
-#products-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    /*max-width: 1200px;*/
-    width: 100%;
-  
-}
-
-.product {
+.card {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.product:hover {
+.card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.product img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px; 
+.card-img-top {
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 8px 8px 0 0;
 }
 
-.product h2 {
-    font-size: 1.1em; 
-    margin: 0.5em 0;
+.card-title {
+    font-size: 1.1em;
     color: #0e387c;
-    height: 40px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    margin-bottom: 10px;
 }
 
-.product p {
-    font-size: 1em; 
-    color: #221a90;
+.card-text {
+    font-size: 1em;
     margin-bottom: 0.8em;
 }
 
-
-
-@media (max-width: 1024px) {
-    #products-container {
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    }
-}
-
-@media (max-width: 768px) {
-    #products-container {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    }
-}
-
-@media (max-width: 600px) {
-    #products-container {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
-}
-
 @media (max-width: 480px) {
-    #products-container {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    }
-
-    .product {
-        padding: 10px;
-    }
-
-    .product h2 {
+    .card-title {
         font-size: 0.9em;
     }
 
-    .product p {
+    .card-text {
         font-size: 0.8em;
     }
-
-
 }
